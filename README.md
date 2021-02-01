@@ -1,2 +1,2 @@
-# Say-young
-각자 레포 만들어서 작업하시면 됩니다~!
+## DSC EWHA 2분기 프로젝트
+### 'FindMyRoomie' in React Study
