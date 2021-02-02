@@ -1,3 +1,24 @@
+@font-face {
+  font-family: 'Spoqa-Han-Sans';
+  src: url('./fonts/Spoqa\ Han\ Sans\ Neo\ Light.otf') format('opentype');
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Spoqa-Han-Sans';
+  src: url('./fonts/Spoqa\ Han\ Sans\ Neo\ Regular.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Spoqa-Han-Sans';
+  src: url('./fonts/Spoqa\ Han\ Sans\ Neo\ Bold.otf') format('opentype');
+  font-style: normal;
+  font-weight: 700;
+}
+
 html {
   font-size: 10px;
 }

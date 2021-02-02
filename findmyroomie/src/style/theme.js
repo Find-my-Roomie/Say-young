@@ -6,7 +6,8 @@ const size = {
 
 const theme = {
     //컬러
-    primary: '',
+    primary: '#8372F5',
+    gray: '#A7A7A7',
 
     // 브레이크 포인트
     mobile: `(max-width: ${size.mobile})`,
