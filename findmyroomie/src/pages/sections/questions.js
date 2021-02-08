@@ -1,155 +1,272 @@
 const contents = [
     {
-        'question': '기숙사 통금 시간이 30분 남았는데 친구가 더 놀자고 한다.',
+        'question': '1. 기숙사 통금 시간이 30분 남았는데\n친구가 더 놀자고 한다.',
         'answers': [
             {
-                text: '외박은 안되니 친구의 제안을 거절하고 기숙사로 돌아온다.',
-                score: ''
-
+                text: '외박은 안된다. 거절하고 기숙사로 돌아온다.',
+                score: {
+                    'outing': 2,
+                    'active': 0,
+                    'clean': 0,
+                    'owl': 0
+                }
             },
             {
                 text: '이 때가 기회라고 생각하고 밤새서 논다.',
-                score: ''
+                score: {
+                    'outing': 8,
+                    'active': 0,
+                    'clean': 0,
+                    'owl': 0
+                }
             }
-        ]
+        ],
+        'weight': 0.7
     },
     {
-        'question': '시험기간 중 가장 좋아하는 공부 장소는?',
+        'question': '2. 시험기간 중 가장 좋아하는 공부 장소는?',
         'answers': [
             {
                 text: '편한게 최고지! 내 방',
-                score: ''
-
+                score: {
+                    'outing': 1,
+                    'active': 0,
+                    'clean': 0,
+                    'owl': 0
+                }
             },
             {
                 text: '멀리 가긴 귀찮아.. 기숙사 내 스터디룸',
-                score: ''
+                score: {
+                    'outing': 2,
+                    'active': 0,
+                    'clean': 0,
+                    'owl': 0
+                }
             },
             {
                 text: '포기할 수 없는 카공',
-                score: ''
+                score: {
+                    'outing': 4,
+                    'active': 0,
+                    'clean': 0,
+                    'owl': 0
+                }
             },
             {
                 text: 'ecc 열람실 셀프 감금',
-                score: ''
+                score: {
+                    'outing': 3,
+                    'active': 0,
+                    'clean': 0,
+                    'owl': 0
+                }
             }
-        ]
+        ],
+        'weight': 0.3
     },
     {
-        'question': '기숙사 입사 후 처음으로 룸메를 마주쳤다!',
+        'question': '3. 기숙사 입사 후 처음으로 룸메를 마주쳤다!',
         'answers': [
             {
-                text: '번호가 어떻게 되세요? 그 자리에서 기숙사 카톡방을 만든다.',
-                score: ''
-
+                text: '번호가 어떻게 되세요? 바로 기숙사 카톡방을 만든다.',
+                score: {
+                    'outing': 0,
+                    'active': 6,
+                    'clean': 0,
+                    'owl': 0
+                }
             },
             {
                 text: '앟… 안녕하세욯…(눈인사)',
-                score: ''
+                score: {
+                    'outing': 0,
+                    'active': 4,
+                    'clean': 0,
+                    'owl': 0
+                }
             }
-        ]
+        ],
+        'weight': 0.5
     },
     {
-        'question': '기숙사 내 편의점이 문을 닫은 밤11시, 너무 배가 고파 거실에 나와보니 부재 중인 룸메이트의 컵라면이 놓여있다.',
+        'question': '4. 기숙사 내 편의점이 문을 닫은 밤11시,\n너무 배가 고파 거실에 나와보니 부재중인 룸메이트의 컵라면이 놓여있다.',
         'answers': [
             {
-                text: '스스럼없이 룸메이트에게 연락해 먹어도 되는지 물어본다.',
-                score: ''
-
+                text: '바로 룸메이트에게 연락해 먹어도 되는지 물어본다.',
+                score: {
+                    'outing': 0,
+                    'active': 8,
+                    'clean': 0,
+                    'owl': 0
+                }
             },
             {
                 text: '20분 거리의 편의점에 다녀온다.',
-                score: ''
+                score: {
+                    'outing': 0,
+                    'active': 2,
+                    'clean': 0,
+                    'owl': 0
+                }
             },
             {
                 text: '일단 배고프니 먹는다.',
-                score: ''
+                score: {
+                    'outing': 0,
+                    'active': -1,
+                    'clean': 0,
+                    'owl': 0
+                }
             }
-        ]
+        ],
+        'weight': 0.3
     },
     {
-        'question': '쓰레기 당번을 잘 안 지키는 룸메가 못마땅한 당신!',
+        'question': '5. 쓰레기 당번을 잘 안 지키는 룸메가 못마땅한 당신!',
         'answers': [
             {
-                text: '너 오늘 당번인데 어디야? 바로 분노의 카톡을 보낸다.',
-                score: ''
+                text: '너 오늘 당번인데 어디야? 당장 분노의 카톡을 보낸다.',
+                score: {
+                    'outing': 0,
+                    'active': 6,
+                    'clean': 0,
+                    'owl': 0
+                }
 
             },
             {
                 text: '연락할까 말까 고민하다가 결국 직접 치운다.',
-                score: ''
+                score: {
+                    'outing': 0,
+                    'active': 4,
+                    'clean': 0,
+                    'owl': 0
+                }
             }
-        ]
+        ],
+        'weight': 0.2
     },
     {
-        'question': '볼 일 보고 집에 들어온 당신, 눈에 들어온 당신의 방 상태는?',
+        'question': '6. 볼 일 보고 집에 들어온 당신, 눈에 들어온 당신의 방 상태는?',
         'answers': [
             {
-                text: '이불은 널브러져 있고 책상엔 이것 저것 정돈이 안되어 있다. 바닥엔 지우개 똥이 한 가득..!',
-                score: ''
+                text: '널브러진 이불, 지우개 똥이 가득한 책상!',
+                score: {
+                    'outing': 0,
+                    'active': 0,
+                    'clean': 2,
+                    'owl': 0
+                }
 
             },
             {
-                text: '잘 개어져 있는 이불, 필요한 것만 딱딱 올려져 있는 깔끔한 책상. 바닥엔 먼지 한 톨 없이 깔끔~',
-                score: ''
+                text: '잘 개어져 있는 이불, 바닥엔 먼지 한 톨 없이 깔끔~',
+                score: {
+                    'outing': 0,
+                    'active': 0,
+                    'clean': 8,
+                    'owl': 0
+                }
             }
-        ]
+        ],
+        'weight': 0.6
     },
     {
-        'question': '욕실에서 머리를 감은 후 나는',
+        'question': '7. 욕실에서 머리를 감은 후 나는',
         'answers': [
             {
                 text: '아 개운하다~',
-                score: ''
-
+                score: {
+                    'outing': 0,
+                    'active': 0,
+                    'clean': 2,
+                    'owl': 0
+                }
             },
             {
-                text: '머리카락을 남겨두면 안되지! 머리카락을 열심히 모아서 버린다',
-                score: ''
+                text: '머리카락을 열심히 모아서 버린다',
+                score: {
+                    'outing': 0,
+                    'active': 0,
+                    'clean': 8,
+                    'owl': 0
+                }
             }
-        ]
+        ],
+        'weight': 0.2
     },
     {
-        'question': '청소기는',
+        'question': '8. 청소기는',
         'answers': [
             {
                 text: '하루에 한 번 돌려야지',
-                score: ''
-
+                score: {
+                    'outing': 0,
+                    'active': 0,
+                    'clean': 9,
+                    'owl': 0
+                }
             },
             {
                 text: '더러우면 돌려야지',
-                score: ''
+                score: {
+                    'outing': 0,
+                    'active': 0,
+                    'clean': 1,
+                    'owl': 0
+                }
             }
-        ]
+        ],
+        'weight': 0.2
     },
     {
-        'question': '내일 아침 7시에 일어나야 된다면?',
+        'question': '9. 내일 아침 7시에 일어나야 된다면?',
         'answers': [
             {
-                text: '6시 55분, 6시 56분, 6시 57분, 6시 58분… 최대한 많이 설정한다. 알람을 잘 못 듣는 날 믿을 수 없다.',
-                score: ''
-
+                text: '날 믿을 수 없다. 1분 간격으로 많이 설정해놓는다.',
+                score: {
+                    'outing': 0,
+                    'active': 0,
+                    'clean': 0,
+                    'owl': 7
+                }
             },
             {
-                text: '7시 알람 하나면 충분하다. 알람을 듣고 어떻게 계속 잘 수가 있어?',
-                score: ''
+                text: '7시 알람 하나면 충분하다.',
+                score: {
+                    'outing': 0,
+                    'active': 0,
+                    'clean': 0,
+                    'owl': 3
+                }
             }
-        ]
+        ],
+        'weight': 0.6
     },
     {
-        'question': '오늘 할 일을 다 마치고 어느새 시간은 밤 10시. 오늘의 남은 시간 동안 당신은?',
+        'question': '10. 오늘 할 일을 다 마치고 어느새 시간은 밤 10시.\n오늘의 남은 시간 동안 당신은?',
         'answers': [
             {
-                text: '벌써 잘 시간이네. 조금 쉬다가 한시간 이내로 자야겠다.',
-                score: ''
-
+                text: '벌써 10시네. 조금 쉬다가 한시간 이내로 자야겠다.',
+                score: {
+                    'outing': 0,
+                    'active': 0,
+                    'clean': 0,
+                    'owl': 1
+                }
             },
             {
                 text: '아직 자려면 멀었네. 조금 놀다가 새벽에 자야겠다.',
-                score: ''
+                score: {
+                    'outing': 0,
+                    'active': 0,
+                    'clean': 0,
+                    'owl': 9
+                }
             }
-        ]
+        ],
+        'weight': 0.4
     },
 
 ]

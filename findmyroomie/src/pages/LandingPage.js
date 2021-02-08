@@ -31,13 +31,11 @@ const Image = styled.div`
 function LandingPage() {
 
     const [isShow, setIsShow] = useState(true);
-    const [isQuizShow, setIsQuizShow] = useState(false);
+    //const [isQuizShow, setIsQuizShow] = useState(false);
 
     //테스트 시작 버튼 클릭
     const onClickStartBtn = () => {
-        console.log("야호");
         setIsShow(false);
-        setIsQuizShow(true);
     }
 
     return (
@@ -47,7 +45,7 @@ function LandingPage() {
                 <Image />
                 <ButtonComponent type={true} text={"시작하기"} onclick={onClickStartBtn} />
             </Container>
-            <QuizPage isShow={isQuizShow} />
+            <QuizPage />
         </>
     );
 }
