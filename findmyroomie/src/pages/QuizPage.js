@@ -37,8 +37,19 @@ function QuizPage() {
         'outing': 0,
         'active': 0,
         'clean': 0,
-        'owl': 0
+        'owl': 0,
+        'finalNum': 0,
     });
+
+    const findResult = (result) => {
+        //점수 비교해서 유형 정하기
+
+        if (result.outing) {
+
+        } else {
+
+        }
+    }
 
     const onClickNextBtn = () => {
 
@@ -47,7 +58,10 @@ function QuizPage() {
         //weight*점수들 해서 result에 더한 값을 넣어놓고
         //10번째 누르면 합산된 점수 더해서 resultPage로 넘겨주기
 
+        //contents[index].answers
+
         if (index === 9) {
+            findResult(result);
             setShowResult(true);
             setOnQuestion(false);
         } else {
@@ -68,7 +82,7 @@ function QuizPage() {
                     />
                 ))}
             </Container>
-            <ResultPage isShow={showResult} result={result} />
+            <ResultPage isShow={showResult} finalNum={result.finalNum} />
         </Wrapper>
     );
 }
