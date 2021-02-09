@@ -152,8 +152,22 @@ const contents = [
             }
         ],
         'weight': 0.4
-    },
-
+    }
+    ,
+    {
+        'question': '',
+        'answers': [
+            {
+                text: '',
+                score: 0
+            },
+            {
+                text: '',
+                score: 0
+            }
+        ],
+        'weight': 0
+    }
 ]
 
 export default contents;

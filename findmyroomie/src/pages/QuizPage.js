@@ -39,38 +39,53 @@ function QuizPage() {
     const [result, setResult] = useState(16);
 
     const findResult = () => {
-
-        let result = 0;
+        let type = '';
 
         //외박많이 or 집수니
         if (overnight >= 5) {
-            console.log("A가 5 이상");
+            type = type + 'W';
         } else {
-            console.log("A가 5 이하");
+            type = type + 'H';
         }
 
         //외향 or 내향
         if (active >= 5) {
-            console.log("B가 5 이상");
+            type = type + 'E';
         } else {
-            console.log("B가 5 이하");
+            type = type + 'I';
         }
 
         //청결중요 or 덜중요
         if (clean >= 5) {
-            console.log("C가 5 이상");
+            type = type + 'S';
         } else {
-            console.log("C가 5 이하");
+            type = type + 'D';
         }
 
         //올빼미 or 이른취침
         if (owl >= 5) {
-            console.log("D가 5 이상");
+            type = type + 'O';
         } else {
-            console.log("D가 5 이하");
+            type = type + 'C';
         }
 
-        setResult(result);
+        //조금 더 효율적으로 하는 방법 없으려나
+        if (type === 'WESO') setResult(0);
+        else if (type === 'WESC') setResult(1);
+        else if (type === 'HISO') setResult(2);
+        else if (type === 'HISC') setResult(3);
+        else if (type === 'WISO') setResult(4);
+        else if (type === 'WISC') setResult(5);
+        else if (type === 'HESO') setResult(6);
+        else if (type === 'HESC') setResult(7);
+        else if (type === 'WIDC') setResult(8);
+        else if (type === 'WIDO') setResult(9);
+        else if (type === 'WEDC') setResult(10);
+        else if (type === 'WEDO') setResult(11);
+        else if (type === 'HIDC') setResult(12);
+        else if (type === 'HIDO') setResult(13);
+        else if (type === 'HEDC') setResult(14);
+        else if (type === 'HEDO') setResult(15);
     }
 
     const onClickNextBtn = (key) => {
@@ -79,6 +94,7 @@ function QuizPage() {
 
         //점수 계산
         let point = contents[index].weight * contents[index].answers[key].score;
+        console.log(point);
 
         //특수한 경우 - 바로 종료
         if (index === 3 && key === 2) {
@@ -88,36 +104,30 @@ function QuizPage() {
         }
 
         //선택지에 따라 점수 합산
-        if (index === 9) {
+        if (index >= 8) {
             //owl
             setOwl(owl + point);
 
-            //마지막 단계 - finalNum 넣어주기
-            findResult();
+            if (index === 9) {
+                //마지막 단계 - finalNum 넣어주기
+                findResult();
 
-            //뷰 전환
-            setShowResult(true);
-            setOnQuestion(false);
-        } else {
-            if (index === 8) {
-                //owl
-                setOwl(owl + point);
-
-            } else if (index >= 5) {
-                //clean
-                setClean(clean + point);
-
-            } else if (index >= 2) {
-                //active
-                setActive(active + point);
-
-            } else {
-                //outgoing
-                setOvernight(overnight + point);
+                //뷰 전환
+                setOnQuestion(false);
+                setShowResult(true);
             }
-            //문제 전환
-            setIndex(index + 1);
+        } else if (index >= 5) {
+            //clean
+            setClean(clean + point);
+        } else if (index >= 2) {
+            //active
+            setActive(active + point);
+        } else {
+            //outgoing
+            setOvernight(overnight + point);
         }
+        //문제 전환
+        setIndex(index + 1);
     }
 
     return (
