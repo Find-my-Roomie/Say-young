@@ -94,7 +94,6 @@ function QuizPage() {
 
         //점수 계산
         let point = contents[index].weight * contents[index].answers[key].score;
-        console.log(point);
 
         //특수한 경우 - 바로 종료
         if (index === 3 && key === 2) {
