@@ -27,10 +27,10 @@ const Button = styled.div`
 `
 
 
-function ButtonComponent({ type, text, onclick }) {
+function ButtonComponent({ idx, type, text, onclick }) {
 
     const onClickBtn = () => {
-        onclick();
+        onclick(idx);
     }
 
     return (

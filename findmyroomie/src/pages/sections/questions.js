@@ -4,21 +4,11 @@ const contents = [
         'answers': [
             {
                 text: '외박은 안된다. 거절하고 기숙사로 돌아온다.',
-                score: {
-                    'outing': 2,
-                    'active': 0,
-                    'clean': 0,
-                    'owl': 0
-                }
+                score: 2
             },
             {
                 text: '이 때가 기회라고 생각하고 밤새서 논다.',
-                score: {
-                    'outing': 8,
-                    'active': 0,
-                    'clean': 0,
-                    'owl': 0
-                }
+                score: 8
             }
         ],
         'weight': 0.7
@@ -28,39 +18,19 @@ const contents = [
         'answers': [
             {
                 text: '편한게 최고지! 내 방',
-                score: {
-                    'outing': 1,
-                    'active': 0,
-                    'clean': 0,
-                    'owl': 0
-                }
+                score: 1
             },
             {
                 text: '멀리 가긴 귀찮아.. 기숙사 내 스터디룸',
-                score: {
-                    'outing': 2,
-                    'active': 0,
-                    'clean': 0,
-                    'owl': 0
-                }
+                score: 2
             },
             {
                 text: '포기할 수 없는 카공',
-                score: {
-                    'outing': 4,
-                    'active': 0,
-                    'clean': 0,
-                    'owl': 0
-                }
+                score: 4
             },
             {
                 text: 'ecc 열람실 셀프 감금',
-                score: {
-                    'outing': 3,
-                    'active': 0,
-                    'clean': 0,
-                    'owl': 0
-                }
+                score: 3
             }
         ],
         'weight': 0.3
@@ -70,21 +40,11 @@ const contents = [
         'answers': [
             {
                 text: '번호가 어떻게 되세요? 바로 기숙사 카톡방을 만든다.',
-                score: {
-                    'outing': 0,
-                    'active': 6,
-                    'clean': 0,
-                    'owl': 0
-                }
+                score: 6
             },
             {
                 text: '앟… 안녕하세욯…(눈인사)',
-                score: {
-                    'outing': 0,
-                    'active': 4,
-                    'clean': 0,
-                    'owl': 0
-                }
+                score: 4
             }
         ],
         'weight': 0.5
@@ -94,30 +54,15 @@ const contents = [
         'answers': [
             {
                 text: '바로 룸메이트에게 연락해 먹어도 되는지 물어본다.',
-                score: {
-                    'outing': 0,
-                    'active': 8,
-                    'clean': 0,
-                    'owl': 0
-                }
+                score: 8
             },
             {
                 text: '20분 거리의 편의점에 다녀온다.',
-                score: {
-                    'outing': 0,
-                    'active': 2,
-                    'clean': 0,
-                    'owl': 0
-                }
+                score: 2
             },
             {
                 text: '일단 배고프니 먹는다.',
-                score: {
-                    'outing': 0,
-                    'active': -1,
-                    'clean': 0,
-                    'owl': 0
-                }
+                score: -1
             }
         ],
         'weight': 0.3
@@ -127,22 +72,12 @@ const contents = [
         'answers': [
             {
                 text: '너 오늘 당번인데 어디야? 당장 분노의 카톡을 보낸다.',
-                score: {
-                    'outing': 0,
-                    'active': 6,
-                    'clean': 0,
-                    'owl': 0
-                }
+                score: 6
 
             },
             {
                 text: '연락할까 말까 고민하다가 결국 직접 치운다.',
-                score: {
-                    'outing': 0,
-                    'active': 4,
-                    'clean': 0,
-                    'owl': 0
-                }
+                score: 4
             }
         ],
         'weight': 0.2
@@ -152,22 +87,12 @@ const contents = [
         'answers': [
             {
                 text: '널브러진 이불, 지우개 똥이 가득한 책상!',
-                score: {
-                    'outing': 0,
-                    'active': 0,
-                    'clean': 2,
-                    'owl': 0
-                }
+                score: 2
 
             },
             {
                 text: '잘 개어져 있는 이불, 바닥엔 먼지 한 톨 없이 깔끔~',
-                score: {
-                    'outing': 0,
-                    'active': 0,
-                    'clean': 8,
-                    'owl': 0
-                }
+                score: 8
             }
         ],
         'weight': 0.6
@@ -177,21 +102,11 @@ const contents = [
         'answers': [
             {
                 text: '아 개운하다~',
-                score: {
-                    'outing': 0,
-                    'active': 0,
-                    'clean': 2,
-                    'owl': 0
-                }
+                score: 2
             },
             {
                 text: '머리카락을 열심히 모아서 버린다',
-                score: {
-                    'outing': 0,
-                    'active': 0,
-                    'clean': 8,
-                    'owl': 0
-                }
+                score: 8
             }
         ],
         'weight': 0.2
@@ -201,21 +116,11 @@ const contents = [
         'answers': [
             {
                 text: '하루에 한 번 돌려야지',
-                score: {
-                    'outing': 0,
-                    'active': 0,
-                    'clean': 9,
-                    'owl': 0
-                }
+                score: 9
             },
             {
                 text: '더러우면 돌려야지',
-                score: {
-                    'outing': 0,
-                    'active': 0,
-                    'clean': 1,
-                    'owl': 0
-                }
+                score: 1
             }
         ],
         'weight': 0.2
@@ -225,21 +130,11 @@ const contents = [
         'answers': [
             {
                 text: '날 믿을 수 없다. 1분 간격으로 많이 설정해놓는다.',
-                score: {
-                    'outing': 0,
-                    'active': 0,
-                    'clean': 0,
-                    'owl': 7
-                }
+                score: 7
             },
             {
                 text: '7시 알람 하나면 충분하다.',
-                score: {
-                    'outing': 0,
-                    'active': 0,
-                    'clean': 0,
-                    'owl': 3
-                }
+                score: 3
             }
         ],
         'weight': 0.6
@@ -249,21 +144,11 @@ const contents = [
         'answers': [
             {
                 text: '벌써 10시네. 조금 쉬다가 한시간 이내로 자야겠다.',
-                score: {
-                    'outing': 0,
-                    'active': 0,
-                    'clean': 0,
-                    'owl': 1
-                }
+                score: 1
             },
             {
                 text: '아직 자려면 멀었네. 조금 놀다가 새벽에 자야겠다.',
-                score: {
-                    'outing': 0,
-                    'active': 0,
-                    'clean': 0,
-                    'owl': 9
-                }
+                score: 9
             }
         ],
         'weight': 0.4

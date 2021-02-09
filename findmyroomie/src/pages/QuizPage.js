@@ -28,43 +28,83 @@ const Text = styled.div`
 
 function QuizPage() {
 
-    //Math.floor(Math.random() * 10)
-
     const [onQuestion, setOnQuestion] = useState(true);
     const [showResult, setShowResult] = useState(false);
     const [index, setIndex] = useState(0);
-    const [result, setResult] = useState({
-        'outing': 0,
-        'active': 0,
-        'clean': 0,
-        'owl': 0,
-        'finalNum': 0,
-    });
 
-    const findResult = (result) => {
-        //점수 비교해서 유형 정하기
+    const [overnight, setOvernight] = useState(0);
+    const [active, setActive] = useState(0);
+    const [clean, setClean] = useState(0);
+    const [owl, setOwl] = useState(0);
+    const [result, setResult] = useState(0);
 
-        if (result.outing) {
+    const findResult = () => {
 
+        //외박많이 or 집수니
+        if (overnight >= 5) {
+            console.log("A가 5 이상");
         } else {
-
+            console.log("A가 5 이하");
         }
+
+        //외향 or 내향
+        if (active >= 5) {
+            console.log("B가 5 이상");
+        } else {
+            console.log("B가 5 이하");
+        }
+
+        //청결중요 or 덜중요
+        if (clean >= 5) {
+            console.log("C가 5 이상");
+        } else {
+            console.log("C가 5 이하");
+        }
+
+        //올빼미 or 이른취침
+        if (owl >= 5) {
+            console.log("D가 5 이상");
+        } else {
+            console.log("D가 5 이하");
+        }
+
+        setResult(0);
     }
 
-    const onClickNextBtn = () => {
+    const onClickNextBtn = (key) => {
+        //Math.floor(Math.random() * 10)
+        //문제 랜덤 출력이 state 동기화가 안돼서 자꾸 밀린다. 이유 찾기.
 
-        //점수 더하기
-        //클릭한 버튼의 score를 받아와서
-        //weight*점수들 해서 result에 더한 값을 넣어놓고
-        //10번째 누르면 합산된 점수 더해서 resultPage로 넘겨주기
-
-        //contents[index].answers
+        let point = contents[index].weight * contents[index].answers[key].score;
 
         if (index === 9) {
-            findResult(result);
+            //owl
+            setOwl(owl + point);
+
+            //마지막 단계 - finalNum 넣어주기
+            findResult();
+
+            //뷰 전환
             setShowResult(true);
             setOnQuestion(false);
         } else {
+            if (index === 8) {
+                //owl
+                setOwl(owl + point);
+
+            } else if (index >= 5) {
+                //clean
+                setClean(clean + point);
+
+            } else if (index >= 2) {
+                //active
+                setActive(active + point);
+
+            } else {
+                //outgoing
+                setOvernight(overnight + point);
+            }
+            //문제 전환
             setIndex(index + 1);
         }
     }
@@ -76,13 +116,14 @@ function QuizPage() {
 
                 {contents[index].answers.map((answer, i) => (
                     <ButtonComponent
-                        key={'answer-' + i}
+                        key={'answer - ' + i}
+                        idx={i}
                         text={answer.text}
                         onclick={onClickNextBtn}
                     />
                 ))}
             </Container>
-            <ResultPage isShow={showResult} finalNum={result.finalNum} />
+            <ResultPage isShow={showResult} finalNum={result} />
         </Wrapper>
     );
 }
