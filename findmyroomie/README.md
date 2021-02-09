@@ -1,1 +1,0 @@
-react boilerplate 작업 완료
