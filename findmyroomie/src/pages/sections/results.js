@@ -157,6 +157,16 @@ const results = [
         'GoodRoomie': 'WEDO',
         'BadRoomie': 'HISC'
 
+    },
+
+    {
+        'result': '당 신 은 룸 메 를 구 하 면 안 된 다',
+        'sub': '라 면 을 허 락 없 이 먹 다 니',
+        'img': '',
+        'desc': '',
+        'GoodRoomie': '읎어',
+        'BadRoomie': '읎어'
+
     }
 ]
 

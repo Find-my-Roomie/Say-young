@@ -36,9 +36,11 @@ function QuizPage() {
     const [active, setActive] = useState(0);
     const [clean, setClean] = useState(0);
     const [owl, setOwl] = useState(0);
-    const [result, setResult] = useState(0);
+    const [result, setResult] = useState(16);
 
     const findResult = () => {
+
+        let result = 0;
 
         //외박많이 or 집수니
         if (overnight >= 5) {
@@ -68,15 +70,24 @@ function QuizPage() {
             console.log("D가 5 이하");
         }
 
-        setResult(0);
+        setResult(result);
     }
 
     const onClickNextBtn = (key) => {
         //Math.floor(Math.random() * 10)
         //문제 랜덤 출력이 state 동기화가 안돼서 자꾸 밀린다. 이유 찾기.
 
+        //점수 계산
         let point = contents[index].weight * contents[index].answers[key].score;
 
+        //특수한 경우 - 바로 종료
+        if (index === 3 && key === 2) {
+            //뷰 전환
+            setShowResult(true);
+            setOnQuestion(false);
+        }
+
+        //선택지에 따라 점수 합산
         if (index === 9) {
             //owl
             setOwl(owl + point);

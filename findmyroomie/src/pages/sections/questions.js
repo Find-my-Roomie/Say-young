@@ -62,7 +62,7 @@ const contents = [
             },
             {
                 text: '일단 배고프니 먹는다.',
-                score: -1
+                score: 0
             }
         ],
         'weight': 0.3
