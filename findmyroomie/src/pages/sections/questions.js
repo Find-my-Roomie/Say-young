@@ -4,11 +4,11 @@ const contents = [
         'answers': [
             {
                 text: '외박은 안된다. 거절하고 기숙사로 돌아온다.',
-                score: 2
+                score: 3
             },
             {
                 text: '이 때가 기회라고 생각하고 밤새서 논다.',
-                score: 8
+                score: 7
             }
         ],
         'weight': 0.7
@@ -87,12 +87,12 @@ const contents = [
         'answers': [
             {
                 text: '널브러진 이불, 지우개 똥이 가득한 책상!',
-                score: 2
+                score: 3
 
             },
             {
                 text: '잘 개어져 있는 이불, 바닥엔 먼지 한 톨 없이 깔끔~',
-                score: 8
+                score: 7
             }
         ],
         'weight': 0.6
