@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import results from './sections/results';
+import KakaoShareBtn from '../components/Kakao';
 
 const Wrapper = styled.div`
     display: ${props => props.isShow === true ? 'flex' : 'none'};
@@ -52,6 +53,7 @@ function ResultPage({ isShow, finalNum }) {
                     {results[results[finalNum].BadRoomie].result}
                 </C>
             </D>
+            <KakaoShareBtn _title={results[finalNum].result} _desc={results[finalNum].desc} _imageUrl={results[finalNum].img} />
         </Wrapper>
     );
 }
