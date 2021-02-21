@@ -19,6 +19,13 @@
   font-weight: 700;
 }
 
+@font-face {
+  font-family: 'Jalnan';
+  src: url('./fonts/JalnanOTF.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+}
+
 html {
   font-size: 10px;
 }
