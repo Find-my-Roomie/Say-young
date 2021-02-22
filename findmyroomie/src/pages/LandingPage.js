@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import image from '../assets/sampleImage.jpg';
 import ButtonComponent from '../components/ButtonComponent';
 import QuizPage from './QuizPage';
 
@@ -19,15 +18,6 @@ const Text = styled.div`
     font-size:2rem;
 `
 
-const Image = styled.div`
-    width: 17.4rem;
-    height:17.4rem;
-    background-image:url(${image});
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:cover;
-`
-
 function LandingPage() {
 
     const [isShow, setIsShow] = useState(true);
@@ -42,7 +32,6 @@ function LandingPage() {
         <>
             <Container isShow={isShow}>
                 <Text>나는 어떤 유형의 룸메이트일까?</Text>
-                <Image />
                 <ButtonComponent type={true} text={"시작하기"} onclick={onClickStartBtn} />
             </Container>
             <QuizPage />

@@ -1,14 +1,15 @@
 const size = {
-    mobile: '480px',
+    mobile: '375px',
     tablet: '768px'
 };
 
 const theme = {
-    //컬러
-    primary: '#8372F5',
-    gray: '#A7A7A7',
+    //color
+    primary: '#00462A',
+    darkGray: '#A7A7A7',
+    gray: '#E5E5E5',
 
-    // 브레이크 포인트
+    // break point
     mobile: `(max-width: ${size.mobile})`,
     tablet: `(max-width: ${size.tablet})`,
     desktop: `(min-width: ${size.tablet})`,

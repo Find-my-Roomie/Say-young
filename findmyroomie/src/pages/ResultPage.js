@@ -32,8 +32,6 @@ const D = styled.div`
 
 function ResultPage({ isShow, finalNum }) {
 
-    //퍼블리싱 어떻게 할지 생각해보기
-
     return (
         <Wrapper isShow={isShow}>
             <A>
